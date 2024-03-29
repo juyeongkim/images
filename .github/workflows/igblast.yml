@@ -34,6 +34,7 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v4
         with:
+          file: ./igblast/Dockerfile
           push: true
           build-args: |
             version=${{ github.event.inputs.version }}
